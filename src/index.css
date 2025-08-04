@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Theme variables */
+:root {
+  --bg-main: #121316;
+  --bg-sidebar: #18191E;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --accent-blue: #4B5EFA;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --card-bg: #1E1F25;
+  --scrollbar-thumb: rgba(102, 102, 102, 0.5);
+  --scrollbar-thumb-hover: rgba(102, 102, 102, 0.8);
+  --scrollbar-track: rgba(18, 19, 22, 0.8);
+  --hover-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark theme - default */
+.dark-theme {
+  --bg-main: #121316;
+  --bg-sidebar: #18191E;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --accent-blue: #4B5EFA;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --card-bg: #1E1F25;
+  --scrollbar-thumb: rgba(72, 72, 72, 0.7);
+  --scrollbar-thumb-hover: rgba(90, 90, 90, 0.9);
+  --scrollbar-track: rgba(18, 19, 22, 0.8);
+  --hover-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Customize scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Enable scrolling in sidebar */
+.overflow-y-auto {
+  overflow-y: auto !important;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix for scrolling issues */
+.h-screen {
+  height: 100vh;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+/* Apply theme variables */
+.bg-content {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+.bg-sidebar {
+  background-color: var(--bg-sidebar);
+}
+
+.text-section-highlight {
+  color: var(--accent-blue);
+}
+
+.border-subtle {
+  border-color: var(--border-color);
+}
+
+.text-blue-400 {
+  color: var(--accent-blue);
+}
+
+/* Make code examples and cards adapt to theme */
+.bg-gray-800 {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.dark-theme .bg-gray-800 {
+  background-color: #1E1F25;
+}
+
+/* Hover state for menu items */
+.hover\:bg-gray-800:hover {
+  background-color: var(--hover-bg);
+}

@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* Book app styling */
+
+.bg-blue-900 {
+  background-color: rgba(30, 64, 175, 0.5);
+}
+
+.bg-gray-700 {
+  background-color: rgba(75, 85, 99, 0.5);
+}
+
+.text-blue-400 {
+  color: #60a5fa;
+}
+
+.text-blue-300 {
+  color: #93c5fd;
+}
+
+.text-purple-400 {
+  color: #c084fc;
+}
+
+/* Adjust the sidebar section highlighting */
+.text-blue-400 {
+  color: #4B5EFA;
+}
